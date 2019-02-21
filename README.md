@@ -270,5 +270,5 @@ See iperf_tests.xlsx for more details
 		
 		* This is also true in REVERSE mode: RPi-client to PC-server; only BW at each second on RPi-client side is OK.  Note that Jitter at PC-server side is also wrong (0)											
 		
-		* Perhaps bugs have been resolve in newer versions of iPerf; but how to find a recent version for Raspbian ? (someome to recompile it?)											
+		* Perhaps bugs have been resolved in newer versions of iPerf; but how to find a recent version for Raspbian ? (someome to recompile it?)											
 
