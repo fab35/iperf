@@ -35,6 +35,11 @@
 
 #include <time.h>
 
+#ifndef CLOCK_MONOTONIC_RAW
+// Required for systems that do not recognize CLOCK_MONOTONIC_RAW, including Windows/Cygwin
+#define CLOCK_MONOTONIC_RAW CLOCK_MONOTONIC
+#endif
+
 int
 iperf_time_now(struct iperf_time *time1)
 {
