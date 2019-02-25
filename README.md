@@ -191,13 +191,13 @@ file for complete information.
 
 SL/FP Observations and issues
 -----------------------------
-### CONFIG ###	
+### CONFIG 01 (official bin releases) ###	
 
 	PC iPerf	v.2.0.5 (08 Jul 2010) pthreads			v3.1.3 x64 (2016-04-21)	
     
 	Rpi iPerf	v.2.0.5 (08 Jul 2010) pthreads			v3.0.7 (2019-01-22 compiled for armv7l Linux)			
 
-### TESTS ###
+### TESTS 01 (official bin releases) ###
 
 See iperf_tests.xlsx for more details
 
@@ -249,7 +249,7 @@ See iperf_tests.xlsx for more details
 
 	22	U3PRR_50_01	iperf3	UDP	Tx=Rpi;Rx=Pc	Reverse																							
 
-### ISSUES ###
+### ISSUES 01 (official bin releases) ###
 
 [iperf2]
 
@@ -271,4 +271,17 @@ See iperf_tests.xlsx for more details
 		* This is also true in REVERSE mode: RPi-client to PC-server; only BW at each second on RPi-client side is OK.  Note that Jitter at PC-server side is also wrong (0)											
 		
 		* Perhaps bugs have been resolved in newer versions of iPerf; but how to find a recent version for Raspbian ? (someome to recompile it?)											
+
+
+### CONFIG 02 (new compiled 3.6+FP versions) ###	
+
+	PC iPerf	v.3.6+ (2019-02-22); compiled using CygWin 
+    
+	Rpi iPerf	v.3.6+ (2019-02-22); compiled for armv7l Linux on a Raspberry Pi3			
+
+### TESTS 01 (new compiled 3.6+FP version) ###
+
+See iperf_tests.xlsx for more details
+Several corrections
+Still ONE annoying issue
 
