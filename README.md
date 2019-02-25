@@ -272,6 +272,7 @@ See iperf_tests.xlsx for more details
 		
 		* Perhaps bugs have been resolved in newer versions of iPerf; but how to find a recent version for Raspbian ? (someome to recompile it?)											
 
+--------
 
 ### CONFIG 02 (new compiled 3.6+FP versions) ###	
 
@@ -279,9 +280,12 @@ See iperf_tests.xlsx for more details
     
 	Rpi iPerf	v.3.6+ (2019-02-22); compiled for armv7l Linux on a Raspberry Pi3			
 
-### TESTS 01 (new compiled 3.6+FP version) ###
+### TESTS 02 (new compiled 3.6+FP version) ###
 
-See iperf_tests.xlsx for more details
-Several corrections
-Still ONE annoying issue
+See iperf_tests.xlsx for more details.
+
+Several corrections.
+
+Still ONE annoying issue.
+
 
