@@ -171,7 +171,15 @@ iperf_udp_recv(struct iperf_stream *sp)
 	if (d < 0)
 	    d = -d;
 	sp->prev_transit = transit;
-	sp->jitter += (d - sp->jitter) / 16.0;
+	#define JITTER_AVG_TYPE 0
+	#if JITTER_AVG_TYPE == 1
+	  if (sp->packet_count > 1)
+	    sp->jitter += (d - sp->jitter) / (sp->packet_count - 1); 
+	  else
+	    sp->jitter += (d - sp->jitter) / 8.0; 
+	#else
+	    sp->jitter += (d - sp->jitter) / 16.0;
+	#end
     }
     else {
 	if (sp->test->debug)
