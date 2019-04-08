@@ -171,6 +171,8 @@ iperf_udp_recv(struct iperf_stream *sp)
 	if (d < 0)
 	    d = -d;
 	sp->prev_transit = transit;
+	// TODO: Update the computation of the averge Jitter (that currently mainly considers the latest packets). 
+	//       Current version keeps the old computation to ease comparisons. Add a flag option in the future.
 	#define JITTER_AVG_TYPE 0
 	#if JITTER_AVG_TYPE == 1
 	  if (sp->packet_count > 1)
@@ -179,7 +181,7 @@ iperf_udp_recv(struct iperf_stream *sp)
 	    sp->jitter += (d - sp->jitter) / 8.0; 
 	#else
 	    sp->jitter += (d - sp->jitter) / 16.0;
-	#end
+	#endif
     }
     else {
 	if (sp->test->debug)

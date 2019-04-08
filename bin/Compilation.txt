@@ -2,48 +2,42 @@ WINDOWS
 -------
 
 1. Download the iperf source code (or git clone)
-
  * Download and extract the iperf source code to Cygwin...
 
 
 2. Configure the compiler
-
  * Start the Cygwin shell from the start menu or the shortcut on your desktop.
 
  * Enter the directory where you extracted the iperf source
  	cd /iperf-2.0.5
 
  * Configure the compiler (this might take a couple minutes)
- 	./configure
+ 	./configure   or better:
+	./configure --program-suffix=6FP --enable-static --disable-shared
 
 
 3.  Compile the source
-
  * To get the compile process started just type make and hit enter.  It shouldn’t take very long for the compile to finish.
  	make
 
 
 4.  Make install
-
  * Assuming your build completed without errors your going to want to run ‘make install’, to do this just type make install in the shell and hit enter.  
  	make install
  * As you can see from the output below iperf.exe was copied to /usr/local/bin/
 
 
 5.  Running iperf
-
  * You can run iperf directly from the Cygwin environment but you will have to specify the full path to the executable eg: /usr/local/bin/iperf.  
    If you prefer to run iperf directly from a Windows command prompt or from another machine you can copy the iperf binary and the nessasary DLL files out of the cygwin environment.
 
  * If you installed Cygwin to the default location then iperf.exe will be located in C:\cygwin\usr\local\bin
-
 
  * You will also need the following DLL files found in C:\cygwin\bin.
  	cygwin1.dll
  	cyggcc_s-1.dll
  	cygstdc++-6.dll
  	Copy the three DLL files and iperf.exe somewhere on your system that is in your path like c:\windows\system32 for example.  You can then run iperf directly from a command prompt.
-
 
 
 
@@ -55,3 +49,5 @@ LINUX
  	./configure --program-suffix=6FP
  	make
  	make install
+
+NOTE: You can force static compil using the options --enable-static --disable-shared

@@ -35,6 +35,7 @@
 
 #include <time.h>
 
+// UPDATE (FP 2019-03-XX) TO COMPILE BOTH FOR LINUX AND WINDOWS
 #ifndef CLOCK_MONOTONIC_RAW
 // Required for systems that do not recognize CLOCK_MONOTONIC_RAW, including Windows/Cygwin
 #define CLOCK_MONOTONIC_RAW CLOCK_MONOTONIC
